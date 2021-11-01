@@ -1,7 +1,5 @@
-# project config template
+# Odin Recipes
 
-[![Wallaby.js](https://img.shields.io/badge/wallaby.js-configured-green.svg)](https://wallabyjs.com)
+Recipes website for [![TheOdinProject](https://img.shields.io/badge/TheOdinProject-tan.svg)](https://theodinproject.com)
 
-run `npx readme-md-generator` after `npm init` to generate readme.
-
-Project is a WIP until I finish studying.
+they added this lesson recently so it's pretty easy for me but I'm doing it anyway so I could complete the whole curriculum.
