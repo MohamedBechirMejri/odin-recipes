@@ -1,28 +1,32 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: './src/main.js',
+    main: "./src/main.js",
   },
-  mode: 'production',
+  mode: "production",
   output: {
-    filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: "[name].[contenthash].js",
+    path: path.resolve(__dirname, "dist"),
   },
   optimization: {
     minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/template.html',
+      template: "./src/template.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "lasagna.html",
+      template: "src/recipes/lasagna.html",
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: "[name].[contenthash].css",
     }),
     new CleanWebpackPlugin(),
   ],
@@ -30,19 +34,19 @@ module.exports = {
     rules: [
       {
         test: /\.html$/i,
-        use: ['html-loader'],
+        use: ["html-loader"],
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env'],
+            presets: ["@babel/preset-env"],
           },
         },
       },
