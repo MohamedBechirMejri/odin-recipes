@@ -1,6 +1,6 @@
 {
-  "name": "project",
-  "version": "0.0.1",
+  "name": "odin-recipes",
+  "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
