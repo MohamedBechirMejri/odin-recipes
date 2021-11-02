@@ -22,7 +22,7 @@ module.exports = {
       template: "./src/template.html",
     }),
     new HtmlWebpackPlugin({
-      filename: "lasagna.html",
+      filename: "recipes/lasagna.html",
       template: "src/recipes/lasagna.html",
     }),
     new MiniCssExtractPlugin({
