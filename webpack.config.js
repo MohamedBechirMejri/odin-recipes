@@ -25,6 +25,10 @@ module.exports = {
       filename: "recipes/lasagna.html",
       template: "src/recipes/lasagna.html",
     }),
+    new HtmlWebpackPlugin({
+      filename: "recipes/pizza.html",
+      template: "src/recipes/pizza.html",
+    }),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
     }),
