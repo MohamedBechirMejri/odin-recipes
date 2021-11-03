@@ -1,6 +1,8 @@
 @use "./styles/colors";
 @use "./styles/mixins";
 @use "./styles/recipes/burger";
+@use "./styles/recipes/lasagna";
+@use "./styles/recipes/pizza";
 
 body {
   background-color: colors.$background-light;
