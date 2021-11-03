@@ -34,6 +34,16 @@ body {
         background-color: colors.$background-dark;
         border-radius: 0.25em;
         text-align: center;
+        transition: all 300ms;
+
+        &:hover {
+          background-color: colors.$background-light;
+          box-shadow: 0 0 0 0.1em;
+
+          a {
+            color: colors.$dark;
+          }
+        }
 
         a {
           color: colors.$light;
