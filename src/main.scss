@@ -4,5 +4,22 @@
 body {
   background-color: colors.$background-light;
   color: colors.$dark;
-  
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: large;
+  text-shadow: 0 0 1.25px;
+
+  #wrapper {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+
+    h1 {
+      text-align: center;
+    }
+  }
 }
